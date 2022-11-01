@@ -1,0 +1,29 @@
+ul,
+ol {
+
+}
+
+ul {
+	list-style: none;
+	padding-inline-start: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

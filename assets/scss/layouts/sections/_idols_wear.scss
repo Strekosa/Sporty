@@ -1,0 +1,289 @@
+.idols-wear-section {
+  padding-left: calc((100% - 1336px) / 2);
+}
+
+.idols-wear-img {
+  overflow: hidden;
+
+  .subtitle {
+    text-transform: capitalize;
+    color: $sub-color;
+    @include adaptiv-margin-bottom(15, 10);
+  }
+
+  .title {
+    @include adaptiv-font(86, 48);
+    @include adaptiv-margin-bottom(34, 20);
+    @include adaptiv-line-height(99, 55);
+    color: $sub-color;
+  }
+
+  .image-bg {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 1;
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+
+  .btn {
+    position: absolute;
+    bottom: 5%;
+    left: 65%;
+    padding: 16.5px 89px;
+    background: linear-gradient(270deg, #B1DAFF 0%, rgba(177, 218, 255, 0) 204.04%);
+    border-radius: 40px;
+    color: #16212E;
+    margin-right: 0;
+    @include adaptiv-font(28, 20);
+    @include adaptiv-line-height(35, 25);
+    letter-spacing: 0.07em;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 5;
+  }
+
+  .hide-large-down, .show-large-down {
+    padding: 0 !important;
+    overflow: hidden;
+
+    span {
+      z-index: 6;
+      position: relative;
+    }
+
+    div {
+      position: relative;
+      padding: 16.5px 89px;
+      overflow: hidden;
+
+      &::before {
+        overflow: hidden;
+        transition: 0.5s all;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #B1DAFF;
+        border-radius: 40px;
+        transform: translateX(100%);
+        z-index: -1;
+
+      }
+    }
+
+    &:hover {
+      div::before {
+        transform: translateX(0);
+        transition: 0.5s all;
+      }
+    }
+  }
+
+  .content {
+    max-width: 877px;
+    margin-top: 250px;
+    position: relative;
+    z-index: 5;
+
+    &-title {
+      padding-left: 65px;
+
+    }
+  }
+
+  .idols-wear-products {
+    padding: 53px 0 29px;
+    background: #16212E;
+  }
+
+  .idols-wear-product {
+    .product {
+      margin-right: 65px;
+      overflow: hidden;
+      width: 228px;
+
+
+      &-image {
+        background: rgba(255, 255, 255, 0.2);
+        margin-bottom: 16px;
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+
+        img {
+          -webkit-transition: 0.4s ease;
+          transition: 0.4s ease;
+        }
+      }
+
+
+      h5 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        padding-bottom: 12px;
+        text-transform: capitalize;
+        width: 90%;
+      }
+
+      p {
+        opacity: 0.6;
+        font-weight: 500;
+        line-height: 20px;
+        padding-bottom: 16px;
+        width: 45%;
+      }
+
+      h6 {
+        font-size: 24px;
+        line-height: 20px;
+        color: $sub-color;
+        transition: .5s ease;
+      }
+    }
+
+    .product:hover {
+      .product-image {
+        img {
+          -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+        }
+      }
+
+      h6 {
+        color: $hover-color;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1400px) {
+  .idols-wear-section {
+    padding-left: 0;
+  }
+  .idols-wear-img {
+    .image-bg {
+      position: relative;
+      right: 0%;
+      top: 0%;
+      transform: translate(0%, -0%);
+      min-height: 100%;
+      min-width: 100%;
+      z-index: 1;
+
+      img {
+        position: static;
+        transform: none;
+      }
+
+      .btn {
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 8%);
+      }
+    }
+
+    .content {
+      max-width: 100%;
+      margin-top: 0px;
+      display: flex;
+      justify-content: center;
+
+      &-title {
+        padding-left: 0px;
+
+      }
+    }
+
+
+    .idols-wear-product {
+
+      margin: 0 auto;
+
+      .products {
+        display: grid;
+        grid-gap: 40px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .product {
+          overflow: hidden;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .idols-wear-img {
+
+    .idols-wear-product {
+      .products {
+        grid-gap: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .idols-wear-img {
+    .image-bg {
+      position: static;
+      height: 386px;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: right;
+      }
+
+      .btn {
+        padding: 7px 54.5px;
+        bottom: 9%;
+
+      }
+    }
+
+    .content {
+      display: block;
+    }
+
+    .idols-wear-products {
+      padding: 46px 0 29px;
+    }
+
+    .idols-wear-product {
+      width: 90%;
+
+      .products {
+        grid-template-columns: 1fr;
+        grid-gap: 64px;
+
+        .product {
+
+          overflow: hidden;
+          width: 100%;
+
+          &-image {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

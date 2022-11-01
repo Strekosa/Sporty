@@ -1,0 +1,16 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 159.02%;
+}
+
+@import "blockquote";
+@import "headings";
+@import "copy";

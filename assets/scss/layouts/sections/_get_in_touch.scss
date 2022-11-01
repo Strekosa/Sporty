@@ -1,0 +1,107 @@
+.get-in-touch {
+  .get-in-touch-main {
+    position: relative;
+    padding-top: 136px;
+    @include adaptiv-margin-bottom(70, 36);
+
+    .get-in-touch-form {
+      justify-content: flex-end;
+      width: 50%;
+    }
+
+    form {
+      padding-right: 87px;
+      padding-top: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+    }
+
+    .get-in-touch-text {
+      width: 50%;
+    }
+
+    .subtitle {
+      color: #9DA3AD;
+      @include adaptiv-font(20, 14);
+      @include adaptiv-margin-bottom(16, 8);
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      @include adaptiv-line-height(120, 60);
+      margin-bottom: 29px;
+    }
+  }
+
+  .get-in-touch-main:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @include adaptiv-width(1108, 280);
+    height: 1px;
+    background-color: rgba(233, 233, 233, 0.4);
+
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #B1DAFF;
+    transition: .5s ease;
+
+    svg {
+      margin-left: 7px;
+      path{
+        transition: .5s ease;
+      }
+    }
+  }
+
+  a:hover {
+    color: $hover-color;
+
+    svg {
+      path {
+        fill: $hover-color;
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 900px) {
+  .get-in-touch {
+    .get-in-touch-main {
+      align-items: center;
+      padding-top: 89px;
+      flex-direction: column;
+
+      form {
+        padding-top: 0;
+        padding-right: 0;
+        align-items: flex-start;
+      }
+    }
+
+    .get-in-touch-form {
+      justify-content: flex-start !important;
+      width: 100% !important;
+    }
+
+    .get-in-touch-text {
+      width: 100% !important;
+    }
+  }
+}

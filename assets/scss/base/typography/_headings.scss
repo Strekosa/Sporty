@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 106.5%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  clear: both;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h1 {
+  @include adaptiv-font(82, 32);
+
+  line-height: 128%;
+  margin-bottom: 47px;
+}
+
+h2 {
+  @include adaptiv-font(120, 54);
+  line-height: 156px;
+
+}
+
+h3 {
+  @include adaptiv-font(92, 48);
+  @include adaptiv-line-height(100,62);
+
+}
+h4{
+  @include adaptiv-font(74, 28);
+  @include adaptiv-line-height(64,32);
+  @include adaptiv-margin-bottom(34,12);
+
+}
+h5 {
+  @include adaptiv-font(36, 24);
+  line-height: 41px;
+
+}
+
+
+h6 {
+  font-size: 28px;
+  line-height: 36px;
+  text-transform: capitalize;
+}

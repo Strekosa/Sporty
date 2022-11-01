@@ -1,0 +1,154 @@
+.sports-slider-section {
+  overflow: hidden;
+
+  .sport-item {
+    height: 470px;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      width: 100%;
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+    }
+  }
+
+  .sport-item:hover {
+    img {
+      -webkit-transform: scale(1.08);
+      transform: scale(1.08);
+    }
+  }
+
+  .slick-slider {
+    margin: 0 -22px;
+
+  }
+
+  .slick-slide {
+
+    text-align: center;
+    margin-right: 22px;
+    margin-left: 22px;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+  }
+
+  .next-arrow {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background: $sub-color;
+    margin: -6px 0 -26px 66%;
+    z-index: 5;
+    display: none;
+
+    svg {
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+    }
+  }
+
+  .next-arrow:hover {
+    svg {
+      margin-left: 10px;
+
+    }
+  }
+
+  .sport-content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+    .post-link {
+      width: 100%;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    background: linear-gradient(270deg, rgba(177, 218, 255, 0.87) 56.25%, rgba(177, 218, 255, 0) 100%);
+    width: 100%;
+    color: #32465F;
+    font-weight: 700;
+    @include adaptiv-font(18, 14);
+    line-height: 128%;
+    text-transform: uppercase;
+    padding: 27px 27px 27px 0;
+
+    svg {
+      margin-left: 12px;
+      margin-right: 11px;
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+    }
+  }
+
+  button:hover {
+
+    svg {
+      margin-left: 23px;
+      margin-right: 0px;
+    }
+  }
+
+}
+
+
+@media (max-width: 1300px) {
+  .sports-slider-section {
+
+    .slick-slider {
+      margin: 0 -12px;
+    }
+
+    .slick-slide {
+      margin-right: 12px;
+      margin-left: 12px;
+
+    }
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .sports-slider-section {
+
+
+    .slick-slider {
+      margin: 0 -100% 0 0;
+    }
+
+    .slick-slide {
+
+      margin-right: 7px;
+      margin-left: 7px;
+    }
+
+    .next-arrow {
+      display: flex;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .sports-slider-section {
+    .sport-item {
+      @include adaptiv-width-mob(550, 246);
+      @include adaptiv-height-mob(470, 316);
+
+      button {
+        padding: 17px 15px 17px 0;
+
+        svg {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
